@@ -50,12 +50,13 @@ function clamp(x,min,max) {
 	return x
 }
 let leng = clamp(Math.round(Math.random() * 100), 12, 30)
-if (options.length == 2) return console.log(d.add(strings.all).random(clamp(Math.round(Math.random() * 100), 12, 30)))
 if (parseInt(options[2])){
 	let cLen = parseInt(options[2])
 	if (cLen < 5 || cLen > 250) return console.error("String length must be between 5 and 250");
 	leng = cLen
 }
+if (options.length == 3) return console.log(d.add(strings.all).random(leng))
+if (options.length == 2) return console.log(d.add(strings.all).random(clamp(Math.round(Math.random() * 100), 12, 30)))
 if (op('-u')) d.add(strings.upper)
 if (op('-l')) d.add(strings.lower)
 if (op('-n')) d.add(strings.numeric)

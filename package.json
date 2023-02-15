@@ -1,5 +1,5 @@
 {
-  "name": "rstring",
+  "name": "@scottricity/rstring",
   "version": "1.0.0",
   "description": "Generate a random string.",
   "main": "index.js",
