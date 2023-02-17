@@ -1,40 +1,7 @@
-const { ArgumentParser } = require("argparse");
+const parser = require("./parser")
 
 const array = (size, val) => Array(size).fill(val);
 const choose = (choices) => choices.at(choices.length * Math.random());
-
-const pools = {
-  lower: "abcdefghijklmnopqrstuvwxyz",
-  upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  numeric: "1234567890",
-  special: "!@#$%^&*(){}`~/;.",
-};
-
-const helpStrings = {
-  lower: "lowercase",
-  upper: "uppercase",
-  numeric: "numbers",
-  special: "special characters",
-};
-
-const parser = new ArgumentParser({
-  prog: "rstring",
-  description: "Generate a random string.",
-});
-
-parser.add_argument("size", {
-  type: parseInt,
-  nargs: "?",
-  help: "number of characters to output; defaults to 12-30 chars",
-});
-
-for (let [key, helpString] of Object.entries(helpStrings)) {
-  parser.add_argument(`-${key[0]}`, {
-    action: "store_true",
-    dest: key,
-    help: `include ${helpString}`,
-  });
-}
 
 const args = parser.parse_args();
 
@@ -48,6 +15,13 @@ if (size !== size) {
 
 // size defaults to a random number between 12-30
 size ??= Math.floor(19 * Math.random()) + 12;
+
+const pools = {
+  lower: "abcdefghijklmnopqrstuvwxyz",
+  upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numeric: "1234567890",
+  special: "!@#$%^&*(){}`~/;.",
+};
 
 for ([k, v] of Object.entries(pools)) pools[k] = v.split("");
 
