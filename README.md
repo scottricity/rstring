@@ -27,10 +27,10 @@ Rename `rstring-win.exe` to `rstring.exe` and there you go.
 
 |     |                            |                            |
 | --- | -------------------------- | -------------------------- |
-| -l  | Include lower case letters | abcdefghijklmnopqrstuvwxyz |
-| -u  | Include upper case letters | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
-| -n  | Include numbers            | 1234567890                 |
-| -s  | Include special characters | !@#$%^&\\\*(){}`~/;.       |
+| `-l`  | Include lower case letters | abcdefghijklmnopqrstuvwxyz |
+| `-u`  | Include upper case letters | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+| `-n`  | Include numbers            | 1234567890                 |
+| `-s`  | Include special characters | !@#$%^&\\\*(){}`~/;.       |
 
 ## Usage
 
