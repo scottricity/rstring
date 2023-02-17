@@ -5,16 +5,13 @@ const choose = (choices) => choices.at(choices.length * Math.random());
 
 const args = parser.parse_args();
 
-let { size } = args;
-
-// NaN check
-if (size !== size) {
+if (Number.isNaN(args.size)) {
   console.error("'size' argument is not a number");
   return;
 }
 
 // size defaults to a random number between 12-30
-size ??= Math.floor(19 * Math.random()) + 12;
+const size = args.size ?? Math.floor(19 * Math.random()) + 12;
 
 const subPools = {
   lower: "abcdefghijklmnopqrstuvwxyz",

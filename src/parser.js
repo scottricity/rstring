@@ -18,7 +18,7 @@ parser.add_argument("size", {
   help: "number of characters to output; defaults to 12-30 chars",
 });
 
-for (let [key, helpString] of Object.entries(helpStrings)) {
+for (const [key, helpString] of Object.entries(helpStrings)) {
   parser.add_argument(`-${key[0]}`, {
     action: "store_true",
     dest: key,
