@@ -16,22 +16,22 @@ if (size !== size) {
 // size defaults to a random number between 12-30
 size ??= Math.floor(19 * Math.random()) + 12;
 
-const pools = {
+const subPools = {
   lower: "abcdefghijklmnopqrstuvwxyz",
   upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numeric: "1234567890",
   special: "!@#$%^&*(){}`~/;.",
 };
 
-for ([k, v] of Object.entries(pools)) pools[k] = v.split("");
+for ([k, v] of Object.entries(subPools)) subPools[k] = v.split("");
 
-const keys = Object.keys(pools);
+const keys = Object.keys(subPools);
 
 const includedKeys = keys.some((k) => args[k])
   ? keys.filter((k) => args[k])
   : keys;
 
-const pool = includedKeys.flatMap((k) => pools[k]);
+const pool = includedKeys.flatMap((k) => subPools[k]);
 
 const result = array(size).map(() => choose(pool));
 console.log(result.join(""));
