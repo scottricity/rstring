@@ -2,8 +2,8 @@
   "name": "@scottricity/rstring",
   "version": "1.0.2",
   "description": "Generate a random string.",
-  "main": "rstring.js",
-  "bin": "rstring.js",
+  "main": "src/index.js",
+  "bin": "src/index.js",
   "scripts": {
     "build": "pkg . --output dist/rstring",
     "test": "echo \"Error: no test specified\" && exit 1"
