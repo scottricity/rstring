@@ -2,9 +2,10 @@
   "name": "@scottricity/rstring",
   "version": "1.0.2",
   "description": "Generate a random string.",
-  "main": "index.js",
-  "bin": "bin/bin.js",
+  "main": "rstring.js",
+  "bin": "rstring.js",
   "scripts": {
+    "build": "pkg . --output dist/rstring",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/scottricity/rstring/issues"
   },
-  "homepage": "https://github.com/scottricity/rstring#readme"
+  "homepage": "https://github.com/scottricity/rstring#readme",
+  "devDependencies": {
+    "pkg": "^5.8.0"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1"
+  }
 }
