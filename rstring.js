@@ -23,10 +23,10 @@ if (size !== size) { // NaN check
 size ??= Math.floor(19 * Math.random()) + 12
 
 const strings = {
-	"lower": "abcdefghijklmnopqrstuvwxyz",
-	"upper": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-	"numeric": "1234567890",
-	"special": "!@#$%^&*(){}`~/;."
+	lower: "abcdefghijklmnopqrstuvwxyz",
+	upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+	numeric: "1234567890",
+	special: "!@#$%^&*(){}`~/;."
 }
 
 for ([k, v] of Object.entries(strings))
