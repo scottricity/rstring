@@ -23,15 +23,13 @@ const subPools = {
   special: "!@#$%^&\\*(){}`~/;.",
 };
 
-for ([k, v] of Object.entries(subPools)) subPools[k] = v.split("");
-
 const keys = Object.keys(subPools);
 
 const includedKeys = keys.some((k) => args[k])
   ? keys.filter((k) => args[k])
   : keys;
 
-const pool = includedKeys.flatMap((k) => subPools[k]);
+const pool = includedKeys.map((k) => subPools[k]).join("");
 
 const result = array(size).map(() => choose(pool));
 console.log(result.join(""));
