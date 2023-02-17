@@ -20,7 +20,7 @@ const subPools = {
   lower: "abcdefghijklmnopqrstuvwxyz",
   upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numeric: "1234567890",
-  special: "!@#$%^&*(){}`~/;.",
+  special: "!@#$%^&\\*(){}`~/;.",
 };
 
 for ([k, v] of Object.entries(subPools)) subPools[k] = v.split("");
