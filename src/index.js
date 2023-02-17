@@ -1,4 +1,4 @@
-const parser = require("./parser")
+const parser = require("./parser");
 
 const array = (size, val) => Array(size).fill(val);
 const choose = (choices) => choices.at(choices.length * Math.random());
